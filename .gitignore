@@ -1,0 +1,36 @@
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors and local tooling
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment and secret files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Logs, temporary files, and build outputs
+*.log
+*.tmp
+*.bak
+tmp/
+temp/
+dist/
+build/
+target/
+node_modules/
+
+# Private project material must never be staged here
+docs/superpowers/
+specs/test-vectors/
+*.nmvault
+*.nmrecovery
