@@ -32,5 +32,27 @@ node_modules/
 # Private project material must never be staged here
 docs/superpowers/
 specs/test-vectors/
+.superpowers/
+.worktrees/
+src/
+test/
+tests/
+scripts/
+.mvn/
+pom.xml
+Cargo.toml
+Cargo.lock
+*.java
+*.class
+*.jar
+*.exe
+*.msi
+*.dll
+*.ps1
+*.ico
+*.png
+*.kdbx
+masterkey.cryptomator
+vault.cryptomator
 *.nmvault
 *.nmrecovery
