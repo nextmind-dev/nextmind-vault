@@ -51,7 +51,15 @@ Cargo.lock
 *.ps1
 *.ico
 *.png
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
 *.kdbx
+*.c9r
+*.c9s
+d/
 masterkey.cryptomator
 vault.cryptomator
 *.nmvault
