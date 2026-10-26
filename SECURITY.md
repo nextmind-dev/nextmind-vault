@@ -2,9 +2,9 @@
 
 ## Current status
 
-NextMind Vault is in development and is not available for download. The application code is not published in this repository and has not yet completed an independent security audit.
+NextMind Vault has a working private MVP for Windows 11, but it is not available for download. The application code and executable are not published in this repository, and the application has not completed an independent security audit.
 
-This repository currently contains public product documentation only. Security reports may still concern published documentation, future release artifacts, project infrastructure, or statements that could create unsafe expectations.
+This repository contains public product documentation only. Security reports may still concern published documentation, project infrastructure, or statements that could create unsafe expectations. There is no authorization to test private builds, systems, accounts, or data.
 
 ## Reporting a vulnerability
 
@@ -29,6 +29,8 @@ Reports will be assessed against the documented threat model and supported versi
 
 ## Safe research
 
-Do not test against other people's data or systems, use real credentials, degrade services, or attempt social engineering. Research should use locally controlled environments and synthetic data.
+Do not seek or test private application builds, unpublished source code, other people's data or systems, real credentials, or actual vaults. Do not degrade services or attempt social engineering. Research concerning public materials should use locally controlled environments and synthetic data.
 
 This policy does not create a bug bounty or authorize activity that would otherwise be unlawful.
+
+See the [distribution and source policy](DISTRIBUTION.md) for the current publication boundary.

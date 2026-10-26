@@ -1,51 +1,36 @@
 # NextMind Vault Roadmap
 
-This roadmap describes direction, not release commitments. Scope and ordering may change as security review and testing uncover new requirements.
+This roadmap separates the working private MVP from future release work. It describes direction, not release commitments, and does not announce a public build.
 
-## Phase 1 — Security and format foundation
+## Working private MVP
 
-- Define the threat model and security invariants.
-- Specify the versioned, portable vault format.
-- Build and test the independent cryptographic core using established primitives.
-- Create known-answer, negative, compatibility, corruption, and recovery tests.
-- Obtain independent review before freezing the first format version.
+- A Windows 11 desktop application with **Files**, **Passwords and secrets**, and **Notes** workspaces.
+- Local encrypted file storage using CryptoFS.
+- KDBX-based storage for passwords, secrets, and notes.
+- Explicit local import and export workflows.
+- Session locking, protected clipboard behavior, local owner testing, and automated application tests.
 
-## Phase 2 — Local storage and recovery
+These capabilities are implemented in private code. They have not completed independent security assessment and are not publicly distributed.
 
-- Implement crash-aware local storage for Windows 11 on NTFS.
-- Add verified, copy-only import and explicit export.
-- Implement recovery-kit creation, testing, and read-only recovery workflows.
-- Exercise power-loss, corruption, disk-full, and partial-data recovery scenarios.
+## Before any public distribution
 
-## Phase 3 — Windows application
+- Resolve all third-party GPL, AGPL, commercial-license, notice, and redistribution obligations while keeping the application source closed.
+- Produce a complete software bill of materials and third-party notices for the exact release build.
+- Complete threat-model, storage, recovery, dependency, and Windows application security reviews.
+- Expand corruption, disk-full, interrupted-write, recovery, and clean-machine testing.
+- Complete accessibility and usability review.
+- Establish reproducible release engineering, signing, provenance, and update procedures.
+- Prepare and test an installer only after the licensing and security gates are satisfied.
+- Publish a release only through an explicitly approved official channel.
 
-- Build the Windows 11 desktop experience.
-- Add files, photos, documents, password records, recovery codes, and notes.
-- Add session locking, protected clipboard handling, diagnostics, and carefully restricted previews.
-- Complete accessibility, installer, and clean-machine recovery testing.
+No date is committed for these gates, and passing one gate does not imply that the others are complete.
 
-## Phase 4 — Review and Windows distribution
+## Later product work
 
-- Complete independent cryptographic, format, recovery, and Windows application security assessments.
-- Resolve or explicitly document findings.
-- Produce a software bill of materials and third-party notices.
-- Prepare a signed Windows `.exe` installer.
-- Publish verified builds through official GitHub Releases or a future official product website.
-
-The intended installation flow is:
-
-1. The user downloads the official installer.
-2. The application installs without requiring developer tools.
-3. A first-run guide explains the local vault and its limitations.
-4. The user creates a vault and saves a recovery kit.
-5. The main vault interface opens after recovery confirmation.
-
-## Phase 5 — Mobile investigation
-
-- Validate the portable core and format on Android and iOS.
-- Evaluate platform lifecycle, secure storage, file handling, backup expectations, and accessibility.
-- Begin mobile product work only after the shared security model has passed the required review gates.
+- Refine diagnostics, recovery guidance, restricted previews, and operational hardening.
+- Validate portability and interoperability against supported CryptoFS and KDBX versions.
+- Investigate Android and iOS only after the desktop security, format, licensing, and release gates are resolved.
 
 ## Not currently available
 
-NextMind Vault is in development and is not available for download. Features listed here must not be treated as implemented or audited until a release explicitly says so.
+There is no public source release, executable, installer, or supported download. The public repository contains documentation only. See the [private MVP status](docs/MVP_STATUS.md) and [distribution policy](DISTRIBUTION.md).

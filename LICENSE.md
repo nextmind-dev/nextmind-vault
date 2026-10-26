@@ -10,4 +10,6 @@ You may view and link to the public pages in this repository for ordinary inform
 
 Third-party names and trademarks remain the property of their respective owners. Future distributed application builds may include third-party components under their own licenses and notices.
 
+The current publication boundary and release gates are described in [DISTRIBUTION.md](DISTRIBUTION.md). That policy does not grant an additional license.
+
 This material is provided without warranties or guarantees of security, availability, fitness for a particular purpose, or non-infringement.
