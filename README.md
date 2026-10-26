@@ -1,56 +1,53 @@
 # NextMind Vault
 
-**A privacy-first, offline encrypted vault for files, photos, documents, passwords and personal data. Built by Nico.**
+**A privacy-first, offline encrypted vault for personal files, passwords, secrets, and notes. Built by Nico.**
 
-> **In development — not available for download yet.**
+> **Private MVP in active development. There is no public download.**
 
-NextMind Vault is a planned local digital vault designed to help people keep sensitive personal information under their own control. The first release is being designed for Windows 11, with Android and iOS considered for future versions.
+NextMind Vault now has a functioning private MVP for Windows 11. It is designed for people who want sensitive personal information to remain under their own control, without a mandatory account, cloud service, or permanent internet connection.
 
-## Vision
+The MVP is being validated privately. It is not a supported public release, its application source code remains private, and it has not completed an independent security audit.
 
-Personal data should not require a mandatory account, cloud service, or permanent internet connection. NextMind Vault is being designed around three principles:
+## Current private MVP
 
-- **Offline-first:** core vault operations are intended to work locally without an account or server.
-- **Encrypted by design:** stored content and its sensitive metadata are intended to be protected using established cryptographic primitives and a reviewed, versioned vault format.
-- **User control:** users should decide where their vault and backups are stored, when information is imported or exported, and how recovery material is kept.
+The working Windows application currently provides three user-facing workspaces:
 
-No software can promise absolute security. NextMind Vault will document its threat model, limitations, recovery model, and audit status instead of relying on absolute or misleading security claims.
+- **Files** — local encrypted storage and everyday file organization;
+- **Passwords and secrets** — records for credentials, recovery codes, and other sensitive values;
+- **Notes** — private text notes stored alongside the other vault content.
 
-## Planned uses
+The MVP reuses established formats and components rather than inventing a new encryption format:
 
-NextMind Vault is intended to support:
+- **CryptoFS** provides the encrypted filesystem layer for files and vault metadata;
+- **KDBX** provides an interoperable database format for passwords, secrets, and notes.
 
-- files and folders;
-- photos and other personal media;
-- documents;
-- passwords and account details;
-- recovery codes and other sensitive codes;
-- private notes.
+These are product-level format choices, not claims that NextMind Vault has been independently audited or approved for high-risk use. See [MVP status](docs/MVP_STATUS.md) for the current boundary.
+
+## Product principles
+
+- **Offline-first:** core vault operations work locally without an account or server.
+- **Encrypted by design:** sensitive content is stored through established encrypted storage formats.
+- **User control:** the user chooses the vault location, handles recovery material, and explicitly imports or exports information.
+- **Honest security communication:** limitations, audit status, and release gates are documented without absolute security promises.
+
+## Availability and source policy
+
+There is no public build, installer, or supported download. The application and its source code remain private. This public repository contains product information, roadmap, security policy, and other public documentation only.
+
+Public distribution is blocked until third-party licensing obligations, security review, release engineering, and signing requirements are resolved. See [Distribution and source policy](DISTRIBUTION.md).
+
+## Project documents
+
+- [Private MVP status](docs/MVP_STATUS.md)
+- [Roadmap](ROADMAP.md)
+- [Security policy](SECURITY.md)
+- [Distribution and source policy](DISTRIBUTION.md)
+- [Repository content license](LICENSE.md)
 
 ## Platforms
 
-- **First platform:** Windows 11.
-- **Future direction:** Android and iOS, after the storage format and cryptographic core have been validated.
-
-## Project status
-
-The project is currently in security architecture and core engineering work. There is no public application build and no supported download.
-
-The application source code remains closed. This public repository is a product information and project-status repository; it is not an open-source release of the application. The application has not yet completed an independent security audit.
-
-See [ROADMAP.md](ROADMAP.md) for planned milestones and [SECURITY.md](SECURITY.md) for responsible vulnerability reporting.
-
-## Availability
-
-When a verified Windows release is ready, the planned user experience is:
-
-1. Download a signed Windows `.exe` installer from official GitHub Releases or a future official product website.
-2. Install the application without developer tools.
-3. Follow a short first-run guide.
-4. Create a vault and save its recovery kit.
-5. Continue to the main vault interface.
-
-This distribution flow is planned for a later stage and is not currently available.
+- **Current MVP:** Windows 11.
+- **Future direction:** Android and iOS may be investigated only after the desktop security, format, licensing, and release gates are resolved.
 
 ## Author
 
